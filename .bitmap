@@ -16,13 +16,13 @@
         "rootDir": "uikit/envs/my-react-env"
     },
     "form/button": {
-        "scope": "",
-        "version": "0.0.1",
+        "scope": "emenu.uikit",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "uikit/form/button"
     },
     "form/input": {
-        "scope": "",
+        "scope": "emenu.uikit",
         "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "uikit/form/input"
