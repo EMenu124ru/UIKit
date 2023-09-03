@@ -1,0 +1,72 @@
+/**
+ * this is the main configuration file of your bit workspace.
+ * for full documentation, please see: https://bit.dev/docs/workspace/workspace-configuration
+ **/{
+  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  /**
+   * main configuration of the Bit workspace.
+   **/
+  "teambit.workspace/workspace": {
+    /**
+     * the name of the component workspace. used for development purposes.
+     **/
+    "name": "UIKit",
+    /**
+     * set the icon to be shown on the Bit server.
+     **/
+    "icon": "https://static.bit.dev/bit-logo.svg",
+    /**
+     * default directory to place a component during `bit import` and `bit create`.
+     * the following placeholders are available:
+     * name - component name includes namespace, e.g. 'ui/button'.
+     * scopeId - full scope-id includes the owner, e.g. 'teambit.compilation'.
+     * scope - scope name only, e.g. 'compilation'.
+     * owner - owner name in bit.dev, e.g. 'teambit'.
+     **/
+    "defaultDirectory": "{scope}/{name}",
+    /**
+     * default scope for all components in workspace.
+     **/
+    "defaultScope": "emenu.uikit",
+    "resolveEnvsFromRoots": true
+  },
+  /**
+   * main configuration for component dependency resolution.
+   **/
+  "teambit.dependencies/dependency-resolver": {
+    /**
+     * choose the package manager for Bit to use. you can choose between 'yarn', 'pnpm'
+     */
+    "packageManager": "teambit.dependencies/pnpm",
+    "policy": {
+      "dependencies": {
+        "@mui/base": "^5.0.0-beta.13",
+        "@mui/types": "^7.2.4",
+        "@teambit/defender.eslint-linter": "1.0.7",
+        "@teambit/defender.jest-tester": "1.0.2",
+        "@teambit/defender.prettier-formatter": "1.0.2",
+        "@teambit/dependencies.modules.packages-excluder": "1.0.0",
+        "@teambit/envs.docs.env-overview-template": "0.0.2",
+        "@teambit/mdx.ui.mdx-scope-context": "1.0.0",
+        "@teambit/preview.react-preview": "1.0.2",
+        "@teambit/react.mounter": "1.0.1",
+        "@teambit/react.react-env": "e7cb0e8e915a142a2c34081732637517fabe70fa",
+        "@teambit/typescript.typescript-compiler": "2.0.6",
+        "classnames": "^2.3.2",
+        "eslint": "^7.28.0"
+      },
+      "peerDependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/material": "^5.14.7"
+      }
+    },
+    "linkCoreAspects": true,
+    "rootComponents": true
+  },
+  "teambit.generator/generator": {
+    "envs": [
+      "emenu.uikit/envs/my-react-env"
+    ]
+  }
+}

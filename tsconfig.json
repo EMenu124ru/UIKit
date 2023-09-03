@@ -1,0 +1,15 @@
+// bit-generated-typescript-config
+{
+  "extends": "./node_modules/.cache/tsconfig.bit.f3b87b1c18fb9e87952d48c4888ed71964a4999d.json",
+  "compilerOptions": {
+    "lib": ["es6", "dom"],
+    "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "typeRoots": [
+      "./node_modules/.cache/global-types",
+      "./node_modules/@types"
+    ]
+  }
+}
